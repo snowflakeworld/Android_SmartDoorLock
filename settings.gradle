@@ -1,0 +1,6 @@
+rootProject.name = "SmartDoorLock"
+include ':app'
+include ':kprogresshud'
+include ':FastBleLib'
+include ':aestheticdialogs'
+include ':ptr-lib'

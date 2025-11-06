@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+//    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.smart.smartdoor"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+
+    implementation "androidx.work:work-runtime:2.7.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+//    implementation 'com.ncorti:slidetoact:0.9.0'
+    implementation 'com.airbnb.android:lottie:3.0.0'
+
+    implementation project(':kprogresshud')
+    implementation project(':aestheticdialogs')
+    implementation project(':FastBleLib')
+    implementation project(':ptr-lib')
+
+//    implementation 'com.thingclips.smart:thingsmart-lock-sdk:5.1.0'          // BLE bundle
+}

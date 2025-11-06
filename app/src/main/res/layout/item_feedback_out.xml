@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:paddingTop="@dimen/spacing_custom_small"
+    android:paddingBottom="@dimen/spacing_custom_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:background="@drawable/shape_oval"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="8dp"
+            android:src="@drawable/ic_user_flaticon"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_custom_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:background="@drawable/img_msg_in"
+            android:backgroundTint="@color/card_background_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1239012301023j12oi3j12olij3oi1j23oi"
+                android:textColor="@color/grey33"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="Today 03:40"
+                android:textColor="@color/grey45"
+                android:textSize="@dimen/font_size_medium" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

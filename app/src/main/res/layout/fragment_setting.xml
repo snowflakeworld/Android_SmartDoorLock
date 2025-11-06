@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".fragment.SettingFragment">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/icon_size_custom_small"
+                android:layout_height="@dimen/icon_size_custom_small"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/spacing_custom_small"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_angle_left_flaticon"
+                app:tint="@color/title_color" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/setting_title"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/font_size_custom_large" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/title_color"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_marginRight="@dimen/spacing_mini"
+                    android:padding="7dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_user_flaticon_outline"
+                    app:tint="@color/title_color" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_button_login"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_mini"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/setting_category_function"
+                android:textColor="@color/grey33"
+                android:textSize="@dimen/font_size_custom_small" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_mini"
+                app:cardBackgroundColor="@color/card_background_color"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/parent_btn_key_manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/btn_key_manage"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/spacing_medium"
+                            android:paddingRight="@dimen/spacing_medium">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size_small"
+                                android:layout_height="@dimen/icon_size_small"
+                                android:src="@drawable/ic_smart_home_key_flaticon_outline"
+                                app:tint="@color/grey45" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/spacing_large"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/setting_key_manage"
+                                android:textColor="@color/grey30"
+                                android:textSize="@dimen/font_size_large" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/divider_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/parent_btn_user_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/btn_user_manage"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/spacing_medium"
+                            android:paddingRight="@dimen/spacing_medium">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size_small"
+                                android:layout_height="@dimen/icon_size_small"
+                                android:src="@drawable/ic_house_user_flaticon"
+                                app:tint="@color/grey45" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/spacing_large"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/setting_user_manage"
+                                android:textColor="@color/grey30"
+                                android:textSize="@dimen/font_size_large" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/divider_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_show_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_bell_notification_call_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="@string/setting_show_notification"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_show_notice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/parent_btn_request_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/divider_color" />
+
+                        <LinearLayout
+                            android:id="@+id/btn_request_admin"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/spacing_medium"
+                            android:paddingRight="@dimen/spacing_medium">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_size_small"
+                                android:layout_height="@dimen/icon_size_small"
+                                android:src="@drawable/ic_user_trust_flaticon"
+                                app:tint="@color/grey45" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/spacing_large"
+                                android:singleLine="true"
+                                android:text="@string/setting_request_admin_auth"
+                                android:textColor="@color/grey30"
+                                android:textSize="@dimen/font_size_large" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/setting_category_user"
+                android:textColor="@color/grey33"
+                android:textSize="@dimen/font_size_custom_small" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_mini"
+                app:cardBackgroundColor="@color/card_background_color"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btn_change_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_user_pen_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:singleLine="true"
+                            android:text="@string/setting_change_user_info"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_private_account_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:singleLine="true"
+                            android:text="@string/setting_change_password"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_use_fingerprint"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_fingerprint_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="@string/setting_use_fingerprint"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_fingerprint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_save_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_save_arrow_right_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="@string/setting_save_password"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_save_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_auto_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_medium"
+                        android:paddingRight="@dimen/spacing_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_sign_in_alt_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="@string/setting_auto_login"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_auto_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<!--
+  ~ Created by Dev. Smith (Hussein Shakir) on 9/17/23, 8:01 PM
+  ~ Copyright Ⓒ 2023. All rights reserved Ⓒ 2023 http://github.com/smith8h
+  ~ Last modified: 9/16/23, 10:13 PM
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at:
+  ~
+  ~                  http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/sdialog_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:paddingStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="20dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sdialog_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/sdialog_icon"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sdialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha=".9"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="Title of SDialog" />
+        </LinearLayout>
+
+        <com.smart.smartdoor.utils.uilib.sdialog.scroll.SScrollView
+            android:id="@+id/sdialog_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="always">
+
+            <TextView
+                android:id="@+id/sdialog_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha=".8"
+                android:textColor="#000"
+                android:textSize="16dp"
+                tools:text="Dummy long text of SDialog" />
+        </com.smart.smartdoor.utils.uilib.sdialog.scroll.SScrollView>
+
+        <LinearLayout
+            android:id="@+id/sdialog_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/sdialog_neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/grey55"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                tools:text="Neutral" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/sdialog_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/grey55"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                tools:text="Negative" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:id="@+id/sdialog_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                tools:text="Positive" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

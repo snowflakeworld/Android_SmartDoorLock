@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".fragment.FeedbackFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_medium">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_oval">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="@dimen/icon_size_custom_small"
+                    android:layout_height="@dimen/icon_size_custom_small"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="@dimen/spacing_custom_small"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_angle_left_flaticon"
+                    app:tint="@color/title_color" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:singleLine="true"
+                android:text="@string/feedback_title"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/font_size_custom_large" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/ptr_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ptr_duration_to_close="200"
+                app:ptr_duration_to_close_header="1000"
+                app:ptr_keep_header_when_refresh="true"
+                app:ptr_pull_to_fresh="false"
+                app:ptr_ratio_of_header_height_to_refresh="1.2"
+                app:ptr_resistance="1.7">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_data_empty" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="@string/feedback_data_empty"
+                    android:textColor="@color/grey50"
+                    android:textSize="@dimen/font_size_custom_small" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_custom_small"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_custom_small"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_custom_small"
+                android:paddingTop="@dimen/spacing_custom_small"
+                android:paddingRight="@dimen/spacing_custom_small"
+                android:paddingBottom="@dimen/spacing_custom_small">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_marginLeft="@dimen/spacing_mini"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_comment_flaticon_outline"
+                    app:tint="@color/grey50" />
+
+                <EditText
+                    android:id="@+id/edit_feedback"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_custom_small"
+                    android:layout_marginRight="@dimen/spacing_custom_small"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/feedback_input_helper_text"
+                    android:maxLines="3"
+                    android:paddingTop="@dimen/spacing_small"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:text=""
+                    android:textColor="@color/grey30"
+                    android:textSize="@dimen/font_size_large" />
+
+                <ImageButton
+                    android:id="@+id/btn_send"
+                    android:layout_width="@dimen/icon_size_custom_small"
+                    android:layout_height="@dimen/icon_size_custom_small"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_paper_plane_flaticon"
+                    app:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">SmartDoorLock</string>
+    <string name="title_nav_home">Home</string>
+    <string name="title_nav_setting">Setting</string>
+    <string name="title_nav_feedback">Feedback</string>
+
+    <string name="home_title">Smart Door Management</string>
+    <string name="home_battery">Door Battery</string>
+    <string name="home_network">Network State</string>
+    <string name="home_bluetooth">Door Connect</string>
+    <string name="home_open_door">Open door</string>
+    <string name="home_key_manage">Key Manage</string>
+    <string name="home_user_manage">User Manage</string>
+    <string name="home_door_open_history">Door Open History</string>
+    <string name="home_bluetooth_connect_tooltip">Bluetooth Connect</string>
+    <string name="home_notice_tooltip">Notice</string>
+    <string name="home_help_tooltip">Help</string>
+    <string name="home_button_login">Login</string>
+    <string name="home_button_logout">Logout</string>
+    <string name="home_address_undefined">Undefined</string>
+    <string name="home_unlock_hold">Hold To Unlock</string>
+
+    <string name="login_title">LogIn</string>
+    <string name="login_userid_helper_text">CID</string>
+    <string name="login_password_helper_text">Password</string>
+    <string name="login_save_password">Save Password</string>
+    <string name="login_auto_login">Auto Login</string>
+    <string name="login_action">Login</string>
+    <string name="login_register_description">Don\'t you have an account?</string>
+    <string name="login_register_action">Register</string>
+    <string name="login_error_cid_empty">Please input cid.</string>
+    <string name="login_error_cid_invalid">Please input correct cid.</string>
+    <string name="login_error_password_empty">Please input password.</string>
+    <string name="login_error_password_leak_length">Password should be more than 8 letters.</string>
+
+    <string name="logout_title">LogOut</string>
+    <string name="logout_confirm">Do you really want to logout?</string>
+    <string name="logout_message">Successfully logged out.</string>
+
+    <string name="register_title">Register</string>
+    <string name="register_userid_helper_text">CID</string>
+    <string name="register_username_helper_text">UserName</string>
+    <string name="register_password_helper_text">Password</string>
+    <string name="register_password_confirm_helper_text">Password Confirm</string>
+    <string name="register_gender_helper_text">Gender</string>
+    <string name="register_gender_male">Male</string>
+    <string name="register_gender_female">Female</string>
+    <string name="register_birthday_helper_text">Birthday</string>
+    <string name="register_citizen_helper_text">Citizen Number</string>
+    <string name="register_address_type_helper_text">Type</string>
+    <string name="register_address_type_house">House</string>
+    <string name="register_address_type_business">Business</string>
+    <string name="register_district_helper_text">District</string>
+    <string name="register_unit_helper_text">Unit</string>
+    <string name="register_floor_helper_text">Floor</string>
+    <string name="register_index_helper_text">Index</string>
+    <string name="register_business_info_helper_text">Business Info</string>
+    <string name="register_auth_type_user">User</string>
+    <string name="register_auth_type_admin">Admin</string>
+    <string name="register_error_cid_empty">Please input cid.</string>
+    <string name="register_error_cid_invalid">Please input correct cid.</string>
+    <string name="register_error_name_empty">Please input username.</string>
+    <string name="register_error_password_empty">Please input password.</string>
+    <string name="register_error_password_leak_length">Password should be more than 8 letters.</string>
+    <string name="register_error_password_confirm_incorrect">Please input correct confirm password.</string>
+    <string name="register_error_birthday_empty">Please select birthday.</string>
+    <string name="register_error_citizen_empty">Please input citizen number.</string>
+    <string name="register_error_district_empty">Please select district.</string>
+    <string name="register_error_business_empty">Please select business.</string>
+    <string name="register_error_unit_empty">Please input unit.</string>
+    <string name="register_error_floor_empty">Please input floor.</string>
+    <string name="register_error_index_empty">Please input index.</string>
+    <string name="register_select_address_title">Address Select</string>
+    <string name="register_select_address_back">Back</string>
+    <string name="register_select_address_warning">Select address.</string>
+    <string name="register_select_address_hint">Select address</string>
+    <string name="register_select_business_title">Select business</string>
+    <string name="register_select_business_empty">No business using smartdoor.</string>
+    <string name="register_confirm_dialog_title">Confirm Register</string>
+    <string name="register_confirm_dialog_content">Are you sure to register?</string>
+
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_input_helper_text">Input your opinion.</string>
+
+    <string name="setting_title">Setting</string>
+    <string name="setting_category_user">User</string>
+    <string name="setting_category_function">Function</string>
+    <string name="setting_log_in">Sign In</string>
+    <string name="setting_log_out">Sign Out</string>
+    <string name="setting_key_manage">Key Manage</string>
+    <string name="setting_user_manage">User Manage</string>
+    <string name="setting_request_admin_auth">Request Admin Authorization</string>
+    <string name="setting_change_user_info">Change User Info</string>
+    <string name="setting_change_password">Change Password</string>
+    <string name="setting_use_fingerprint">Use Fingerprint</string>
+    <string name="setting_save_password">Save Password</string>
+    <string name="setting_auto_login">Auto Login</string>
+    <string name="setting_screen_mode">Screen Mode</string>
+    <string name="setting_screen_mode_light">Light</string>
+    <string name="setting_screen_mode_Dark">Dark</string>
+    <string name="setting_show_notification">Show Notification</string>
+
+    <string name="feedback_data_empty">No feedback data.</string>
+    <string name="feedback_warning_send_data_empty">Please input feedback correctly.</string>
+
+    <string name="change_error_password_empty">Please input password.</string>
+    <string name="change_error_current_password_not_equal">Please input correct current password.</string>
+    <string name="change_error_new_password_not_confirm">Please input correct new password.</string>
+    <string name="change_error_password_leak_length">Password should be more than 8 letters.</string>
+
+    <string name="request_admin_auth_title">Request Admin Auth</string>
+    <string name="request_admin_auth_content">Do you really want to request?</string>
+
+    <string name="change_userinfo_title">Change Userinfo</string>
+    <string name="change_userinfo_button">Change</string>
+
+    <string name="history_title">History</string>
+
+    <string name="usermanage_title">User Manage</string>
+    <string name="usermanage_confirm_title">Confirm</string>
+    <string name="usermanage_confirm_content">Do you want to process?</string>
+
+    <string name="foreground_service_title">SmartDoorService</string>
+    <string name="foreground_service_content">Program is running.</string>
+
+    <string name="bluetooth_connect_failure_title">Door connect failed</string>
+    <string name="bluetooth_connect_not_authorized">You are not allowed to connect door device.</string>
+    <string name="bluetooth_connect_service_not_running">Service is not running.</string>
+    <string name="bluetooth_ble_not_supported">Your device cannot enable bluetooth.</string>
+    <string name="bluetooth_turn_on">You should turn on bluetooth.</string>
+    <string name="bluetooth_connect_already_done">Already connected.</string>
+    <string name="bluetooth_connect_processing">Door connecting...</string>
+    <string name="bluetooth_connect_failure">Door connect failed.</string>
+    <string name="bluetooth_connect_success">Successfully connected.</string>
+
+    <string name="open_door_request_success_title">Request Success</string>
+    <string name="open_door_request_success_content">Operation succeeded. After door opening, you will receive notification</string>
+
+    <string name="notify_title_open_request">Request</string>
+    <string name="notify_title_open_history">Open History</string>
+
+    <string name="change_password_title">Change Password</string>
+    <string name="change_password_hint_now">Current Password</string>
+    <string name="change_password_hint_new">New Password</string>
+    <string name="change_password_hint_new_confirm">New Password Confirm</string>
+
+    <string name="password_confirm">Password Confirm</string>
+
+    <string name="percent">%</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="finish_message">Press once more to exit.</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="button_login">LOGIN</string>
+    <string name="button_register">REGISTER</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_reject">Reject</string>
+    <string name="button_disable">Disable</string>
+    <string name="button_enable">Enable</string>
+
+    <string name="state_disabled">Disabled</string>
+    <string name="state_accepted">Accepted</string>
+    <string name="state_deleted">Deleted</string>
+    <string name="state_requested">Requested</string>
+
+    <string name="dialog_title_success">Success</string>
+    <string name="dialog_title_warning">Warning</string>
+    <string name="dialog_title_failure">Failure</string>
+
+    <string name="warning_network_connection_failed">Network connection failed.</string>
+    <string name="warning_unknown_error">Unknown error.</string>
+    <string name="warning_data_empty">Data empty.</string>
+    <string name="warning_result_empty">Result empty.</string>
+    <string name="warning_no_more_data">No more data.</string>
+
+    <string name="sdialog_icon">Dialog Icon</string>
+</resources>

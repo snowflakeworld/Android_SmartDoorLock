@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="BottomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialogsAnimation</item>
+    </style>
+
+    <style name="BottomDialogsAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_dismiss</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.TopCutBottomRounded" parent="">
+        <!-- Top corners cut -->
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+
+        <!-- Bottom corners rounded -->
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">30dp</item>
+        <item name="cornerSizeBottomRight">30dp</item>
+    </style>
+
+    <style name="MyDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+</resources>

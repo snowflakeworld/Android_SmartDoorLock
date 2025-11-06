@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:clickable="true"
+    tools:context=".fragment.HomeFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_background_color"
+        app:cardElevation="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TopCutBottomRounded"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/group_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/spacing_custom_small"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/title_color"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/spacing_small"
+                        android:paddingRight="@dimen/spacing_small">
+
+                        <ImageView
+                            android:id="@+id/icon"
+                            android:layout_width="@dimen/icon_size_medium"
+                            android:layout_height="@dimen/icon_size_medium"
+                            android:layout_marginRight="@dimen/spacing_mini"
+                            android:padding="7dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_user_flaticon_outline"
+                            app:tint="@color/title_color" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_button_login"
+                            android:textColor="@color/title_color"
+                            android:textSize="@dimen/font_size_medium" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageButton
+                    android:id="@+id/btn_news"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_notifications_outline"
+                    android:tint="@color/grey35"
+                    android:tooltipText="@string/home_notice_tooltip" />
+
+                <ImageButton
+                    android:id="@+id/btn_help"
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:layout_marginRight="@dimen/spacing_medium"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_help_outline"
+                    android:tint="@color/grey35"
+                    android:tooltipText="@string/home_help_tooltip" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/home_title"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/font_size_extra_large"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:padding="@dimen/spacing_mini"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_marker_flaticon"
+                    app:tint="@color/grey35" />
+
+                <com.smart.smartdoor.utils.uilib.MarqueeTextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:text="Undefined"
+                    android:textColor="@color/grey35"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topPanel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/parent_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_network"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_mini"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/home_card_color_2"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_small">
+
+                        <ImageView
+                            android:id="@+id/icon_network"
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_wifi_exclamation_flaticon"
+                            app:tint="@color/home_card_icon_color_2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_custom_small"
+                            android:singleLine="true"
+                            android:text="@string/home_network"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_network"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_mini"
+                            android:singleLine="true"
+                            android:text="@string/unknown"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_bluetooth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_mini"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/home_card_color_3"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_small">
+
+                        <ImageView
+                            android:id="@+id/icon_bluetooth"
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_bluetooth_alert_flaticon_outline"
+                            app:tint="@color/home_card_icon_color_3" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_custom_small"
+                            android:singleLine="true"
+                            android:text="@string/home_bluetooth"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_bluetooth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_mini"
+                            android:singleLine="true"
+                            android:text="@string/unknown"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_battery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/home_card_color_1"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_small">
+
+                        <ImageView
+                            android:id="@+id/icon_battery"
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:padding="2dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_battery_alert_flaticon"
+                            app:tint="@color/home_card_icon_color_1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_custom_small"
+                            android:singleLine="true"
+                            android:text="@string/home_battery"
+                            android:textColor="@color/grey30"
+                            android:textSize="@dimen/font_size_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_battery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_mini"
+                            android:singleLine="true"
+                            android:text="@string/unknown"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.smart.smartdoor.utils.uilib.RippleBackground
+                android:id="@+id/parent_ripple"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/spacing_medium"
+                app:rb_color="@color/blue200"
+                app:rb_duration="2500"
+                app:rb_radius="24dp"
+                app:rb_rippleAmount="1"
+                app:rb_scale="6">
+
+                <FrameLayout
+                    android:layout_width="@dimen/home_circle_outside"
+                    android:layout_height="@dimen/home_circle_outside"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/gradient_oval">
+
+                </FrameLayout>
+
+                <com.smart.smartdoor.utils.uilib.CircularProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="@dimen/home_circle_middle"
+                    android:layout_height="@dimen/home_circle_middle"
+                    android:layout_centerInParent="true"
+                    app:cpb_background_progressbar_color="@color/transparent"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progress="0"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/white"
+                    app:cpb_progressbar_width="5dp"
+                    app:cpb_round_border="true"
+                    app:cpb_start_angle="270" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_unlock"
+                    android:layout_width="@dimen/home_circle_inside"
+                    android:layout_height="@dimen/home_circle_inside"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/parent_unlock_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_medium"
+                            android:layout_height="@dimen/icon_size_medium"
+                            android:src="@drawable/ic_lock_flaticon"
+                            app:tint="@color/grey45" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_small"
+                            android:text="@string/home_unlock_hold"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progress_unlock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.smart.smartdoor.utils.uilib.RippleBackground>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/spacing_medium"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_bluetooth_connect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/card_background_color"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_custom_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_bluetooth_signal_flaticon"
+                            app:tint="@color/colorAccent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_custom_small"
+                            android:singleLine="true"
+                            android:text="@string/home_bluetooth"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_history"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:cardBackgroundColor="@color/card_background_color"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_custom_small">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_small"
+                            android:layout_height="@dimen/icon_size_small"
+                            android:src="@drawable/ic_time_past_flaticon"
+                            app:tint="@color/red500" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_custom_small"
+                            android:singleLine="true"
+                            android:text="@string/home_door_open_history"
+                            android:textColor="@color/grey35"
+                            android:textSize="@dimen/font_size_medium" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:src="@drawable/ic_bluetooth_signal_flaticon"
+        android:tooltipText="@string/home_bluetooth_connect_tooltip"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:tint="@color/white" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

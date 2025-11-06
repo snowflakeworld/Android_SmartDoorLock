@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:background="@drawable/shape_oval_alpha">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/icon_size_custom_small"
+                android:layout_height="@dimen/icon_size_custom_small"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/spacing_custom_small"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_angle_left_flaticon"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/register_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_jumbo"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_round_rect_left_corner"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbar">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_medium">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_medium"
+                android:paddingRight="@dimen/spacing_large"
+                android:paddingBottom="@dimen/spacing_custom_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_cid"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_userid_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:startIconDrawable="@drawable/ic_user_flaticon_outline"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_cid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusedByDefault="false"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_username_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:startIconDrawable="@drawable/ic_id_card_flaticon"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusedByDefault="true"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_password_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:startIconDrawable="@drawable/ic_key_flaticon_outline"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_password_confirm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_password_confirm_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:startIconDrawable="@drawable/ic_key_flaticon_outline"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_password_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_gender"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/register_gender_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                        app:startIconDrawable="@drawable/ic_male_femail_flaticon"
+                        app:startIconTint="@color/image_tint_color"
+                        app:startIconTintMode="src_in">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusedByDefault="false"
+                            android:longClickable="false"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/spacing_custom_small"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_mini">
+
+                        <RadioButton
+                            android:id="@+id/radio_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/register_gender_male"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <RadioButton
+                            android:id="@+id/radio_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_medium"
+                            android:text="@string/register_gender_female"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_birthday"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_birthday_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:endIconDrawable="@drawable/ic_sort_down_flaticon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/edit_hint_color"
+                    app:endIconTintMode="src_in"
+                    app:startIconDrawable="@drawable/ic_calendar_day_flaticon"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusedByDefault="false"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_citizen"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_citizen_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:startIconDrawable="@drawable/ic_credit_card_user_flaticon"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_citizen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_address_type"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/register_address_type_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                        app:startIconDrawable="@drawable/ic_marker_flaticon"
+                        app:startIconTint="@color/image_tint_color"
+                        app:startIconTintMode="src_in">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_address_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusedByDefault="false"
+                            android:longClickable="false"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/spacing_custom_small"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_mini">
+
+                        <RadioButton
+                            android:id="@+id/radio_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/register_address_type_house"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <RadioButton
+                            android:id="@+id/radio_business"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_medium"
+                            android:text="@string/register_address_type_business"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_district"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_district_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:endIconDrawable="@drawable/ic_sort_down_flaticon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/edit_hint_color"
+                    app:endIconTintMode="src_in"
+                    app:startIconDrawable="@drawable/ic_land_location_flaticon"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusedByDefault="false"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:maxLength="50"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/parent_house_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_unit"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/register_unit_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_floor"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_small"
+                        android:layout_marginRight="@dimen/spacing_small"
+                        android:layout_weight="1"
+                        android:hint="@string/register_floor_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_floor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_index"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/register_index_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_index"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_parent_business"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small"
+                    android:hint="@string/register_business_info_helper_text"
+                    android:textColorHint="@color/edit_help_color"
+                    app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                    app:endIconDrawable="@drawable/ic_sort_down_flaticon"
+                    app:endIconMode="custom"
+                    app:endIconTint="@color/edit_hint_color"
+                    app:endIconTintMode="src_in"
+                    app:startIconDrawable="@drawable/ic_visit_flaticon"
+                    app:startIconTint="@color/image_tint_color"
+                    app:startIconTintMode="src_in">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusedByDefault="false"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/font_size_large" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_custom_small">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_parent_auth"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/register_address_type_helper_text"
+                        android:textColorHint="@color/edit_help_color"
+                        app:boxStrokeColor="@color/mtrl_outlined_stroke_color"
+                        app:startIconDrawable="@drawable/ic_marker_flaticon"
+                        app:startIconTint="@color/image_tint_color"
+                        app:startIconTintMode="src_in">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_auth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:focusedByDefault="false"
+                            android:longClickable="false"
+                            android:textColor="@color/edit_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/spacing_custom_small"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/spacing_mini">
+
+                        <RadioButton
+                            android:id="@+id/radio_auth_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/register_auth_type_user"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                        <RadioButton
+                            android:id="@+id/radio_auth_admin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_medium"
+                            android:text="@string/register_auth_type_admin"
+                            android:textColor="@color/content_text_color"
+                            android:textSize="@dimen/font_size_large" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_register"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="@string/register_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

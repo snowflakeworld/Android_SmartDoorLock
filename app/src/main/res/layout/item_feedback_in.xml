@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:paddingTop="@dimen/spacing_custom_small"
+    android:paddingBottom="@dimen/spacing_custom_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/parent_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_custom_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:background="@drawable/img_msg_out"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1239012301023j12oi3j12olij3oi1j23oi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="Today 03:40"
+                android:textColor="@color/grey95"
+                android:textSize="@dimen/font_size_medium" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:background="@drawable/shape_oval"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="8dp"
+            android:src="@drawable/ic_building_flaticon"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+</FrameLayout>

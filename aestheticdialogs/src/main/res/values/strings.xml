@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AestheticDialogs</string>
+    <string name="BTN_OK">OK</string>
+    <string name="BTN_CANCEL">CANCEL</string>
+</resources>

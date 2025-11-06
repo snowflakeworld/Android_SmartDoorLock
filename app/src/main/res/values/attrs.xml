@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SScrollView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RipplePulseRelativeLayout">
+        <attr name="pulse_layout_ShowPreview" format="boolean" />
+        <attr name="pulse_layout_RippleColor" format="color|reference" />
+        <attr name="pulse_layout_PulseType" format="enum">
+            <enum name="fill" value="0" />
+            <enum name="stroke" value="1" />
+        </attr>
+        <attr name="pulse_layout_PulseDuration" format="integer|reference" />
+        <attr name="pulse_layout_StartDelay" format="integer|reference" />
+        <attr name="pulse_layout_EndDelay" format="integer|reference" />
+        <attr name="pulse_layout_RippleStrokeWidth" format="dimension|reference" />
+        <attr name="pulse_layout_RippleStartRadiusPercent" format="float" />
+        <attr name="pulse_layout_RippleEndRadiusPercent" format="float" />
+        <attr name="pulse_layout_PulseInterpolator" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension"/>
+        <attr name="rb_radius" format="dimension"/>
+        <attr name="rb_duration" format="integer"/>
+        <attr name="rb_rippleAmount" format="integer"/>
+        <attr name="rb_scale" format="float"/>
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0"/>
+            <enum name="strokeRipple" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpb_progress" format="integer" />
+        <attr name="cpb_progress_max" format="integer" />
+        <attr name="cpb_indeterminate_mode" format="boolean" />
+        <attr name="cpb_progressbar_color" format="color" />
+        <attr name="cpb_progressbar_color_start" format="color" />
+        <attr name="cpb_progressbar_color_end" format="color" />
+        <attr name="cpb_progressbar_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <attr name="cpb_background_progressbar_color" format="color" />
+        <attr name="cpb_background_progressbar_color_start" format="color" />
+        <attr name="cpb_background_progressbar_color_end" format="color" />
+        <attr name="cpb_background_progressbar_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <attr name="cpb_progressbar_width" format="dimension" />
+        <attr name="cpb_background_progressbar_width" format="dimension" />
+        <attr name="cpb_round_border" format="boolean" />
+        <attr name="cpb_start_angle" format="float" />
+        <attr name="cpb_progress_direction">
+            <flag name="to_right" value="1" />
+            <flag name="to_left" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
