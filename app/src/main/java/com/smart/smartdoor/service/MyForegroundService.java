@@ -211,7 +211,7 @@ public class MyForegroundService extends Service implements MyBleManager.BleConn
         else
             myBleManager.requestBatteryState();
 
-        System.out.println("Device Address: " + bluetoothAddress + " " + myBleManager.isConnected());
+        // System.out.println("Device Address: " + bluetoothAddress + " " + myBleManager.isConnected());
     }
 
     @Override
