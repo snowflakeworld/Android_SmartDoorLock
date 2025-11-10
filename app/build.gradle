@@ -35,7 +35,7 @@ dependencies {
     implementation "androidx.work:work-runtime:2.7.0"
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 
-//    implementation 'com.ncorti:slidetoact:0.9.0'
+    implementation 'com.ncorti:slidetoact:0.9.0'
     implementation 'com.airbnb.android:lottie:3.0.0'
 
     implementation project(':kprogresshud')
@@ -43,5 +43,5 @@ dependencies {
     implementation project(':FastBleLib')
     implementation project(':ptr-lib')
 
-//    implementation 'com.thingclips.smart:thingsmart-lock-sdk:5.1.0'          // BLE bundle
+    implementation 'com.thingclips.smart:thingsmart-lock-sdk:5.1.0'          // BLE bundle
 }
